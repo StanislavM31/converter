@@ -1,2 +1,4 @@
 # converter
-react+NodeJs currency converter with localServer
+react+Node.js currency converter (use localhost 5000)
+
+*git clone https://github.com/StanislavM31/currency-converter*
