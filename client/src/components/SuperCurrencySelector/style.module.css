@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+* {
+  font-family: 'Inter', system-ui !important;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.superselector {
+  width: 600px;
+  margin: 5px auto;
+  background-color: rgb(199, 215, 230);
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+}
+.list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.block{
+  height: 50px;
+  display: flex;
+  gap:15px;
+  align-items: center;
+  width: 100%;
+}
+input {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 5px 3px;
+  letter-spacing: 1px;
+  outline: none;
+  border-radius: 5px;
+}
+option, select{
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+
+  padding: 5px 3px;
+  letter-spacing: 1px;
+  outline: none;
+  border-radius: 5px;
+  width: 80%;
+}
+.selAdd{
+  display: flex;
+  align-items: center;
+}
+
+.addBtn{
+  border-radius: 15px;
+  background-color: rgb(10, 207, 20);
+  border: 1px solid #24e234;
+  color: rgb(47, 51, 59);
+  font-weight: 500;
+  padding: 5px 5px;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+.deleteBtn{
+  border-radius: 15px;
+  background-color: #f05a5a;
+  border: 1px solid #e24141;
+  font-weight: 500;
+  color: rgb(94, 91, 91);
+  padding: 5px 15px;
+  font-size: 1rem;
+  margin-left: auto;
+}
+.addBtn:hover{
+  background-color: #4de655;
+  color: rgb(131, 89, 34);
+}
+.deleteBtn:hover{
+  background-color: #dd7e7e;
+  color: rgb(58, 54, 49);
+}

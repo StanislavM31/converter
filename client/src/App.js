@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import StaticCurrencyConverter from "./components/StaticCurrencyConverter/StaticCurrencyConverter";
 
-function App() {
+import SuperCurrencySelector from "./components/SuperCurrencySelector/SuperCurrencySelector";
+import GetDataFromAPI from "./components/GetDataFromAPI/GetDataFromAPI.jsx";
+import { CurrencyProvider } from "./components/Context/CurrencyContext";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CurrencyProvider>
+      <div className="App">
+        <div className="AppContainer">
+          <h1>Currency Converter</h1>
+          <div>
+            <GetDataFromAPI />
+          </div>
+          <div>
+            <StaticCurrencyConverter />
+            <SuperCurrencySelector />
+          </div>
+        </div>
+      </div>
+    </CurrencyProvider>
   );
 }
-
-export default App;

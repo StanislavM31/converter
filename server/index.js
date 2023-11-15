@@ -1,5 +1,5 @@
 const express = require('express');
-
+const { getAll, createData } = require('./service/service.js');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
@@ -13,4 +13,25 @@ app.use(bodyParser.json());
 
 app.listen(port, () => {
     console.log(`server is running on ${port}`);
+});
+
+app.get('/', (req, res) => {
+    try {
+        const data = getAll();
+        res.send(data);
+    }
+    catch (err) {
+        res.send(err.message);
+    }
+});
+
+
+app.post('/', (req, res) => {
+    try {
+        const dataFromClient = req.body;
+        const data = createData(dataFromClient);
+        res.send(data);
+    } catch (err) {
+        res.send(err.message);
+    }
 });
